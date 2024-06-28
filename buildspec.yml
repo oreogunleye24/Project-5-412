@@ -9,7 +9,7 @@ phases:
       - echo Build completed on `date`
   post_build:
     commands:
-      - aws s3 sync . s3://csce412ool.xyz --delete
+      - aws s3 sync . s3://csce412ool.xyz --region us-east-2 --delete
 artifacts:
   files:
     - '**/*'
